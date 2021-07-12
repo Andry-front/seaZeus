@@ -1,23 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const boxActiveList = [...document.getElementsByClassName('box-event-active')];
-    const buttonsAll = (buttons) => {
-        for (const button of buttons) {
-            button.addEventListener('click', (event) => {
-                const listClass = [...button.classList];
-                const res = listClass.find(item => item === 'active');
-
-                if (res) {
-                    button.classList.remove('active')
-                } else if (event.target !== button) {
-                    button.classList.add('active');
-                } else {
-                    button.classList.add('active');
-                }
-            })
-        }
-    };
-    buttonsAll(boxActiveList);
-
     const marketplaceStyle = '../styles/css/marketplace/marketplace.css';
 
     const addStyle = (aFile) => {
@@ -38,6 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 newTag.id = IdName;
             }
             return newTag;
+        };
+        const addElemMarketplace = () => {
+            const productBox = createDOMElem('div','flex','product-box');
+            H1.after(productBox);
+
+            productBox.innerHTML =
+                `${sortSelectDOM}
+                ${toolsProductDOM}
+                ${productListDOM}`;
         }
 
         const newBody = createDOMElem('div','flex','body');
@@ -48,28 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
         newBody.innerHTML =
             `${headerDOM}
             ${menuDOM}
-            ${footerDOM}`;
+            ${footerDOM}
+            ${modalCartDOM}`;
         document.getElementById('menu').after(mainContainer);
 
         mainContainer.prepend(H1);
         H1.innerHTML = page;
 
-        const addElemMarketplace = () => {}
+        switch (page) {
+            case 'marketplace':
+                addElemMarketplace();
+                break;
+        }
     }
 
     addStyle(marketplaceStyle);
-    // renderPage(document.body.getAttribute('data-page'));
+    renderPage(document.body.getAttribute('data-page'));
 
     const cartModal = () => {
         const button = document.getElementById('basket-icon');
         const modalCart = document.getElementById('modal-cart');
 
         button.addEventListener( 'click',(event) => {
+            document.body.style.cssText = 'overflow: hidden';
             modalCart.classList.add('open');
 
             const closeBox = modalCart.getElementsByClassName('close');
 
             closeBox[0].addEventListener('click', () => {
+                document.body.style.cssText = '';
                 modalCart.classList.remove('open');
             })
         })
@@ -86,11 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
             switch (label) {
                 case '-':
                     number = Number(input.value)-1;
-                    input.value = Number(input.value) > input.min ? number : input.value;
+                    input.value = +input.value > input.min ? number : input.value;
                     break;
                 case '+':
                     number = Number(input.value)+1;
-                    input.value = Number(input.value) < input.max ? number : input.value;
+                    input.value = +input.value < input.max ? number : input.value;
                     break;
             }
             input.focus();
@@ -119,4 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteCart();
     }
     counterCart();
+
+
+
+    const boxActiveList = [...document.getElementsByClassName('box-event-active')];
+    const buttonsAll = (buttons) => {
+        for (const button of buttons) {
+            button.addEventListener('click', (event) => {
+                const listClass = [...button.classList];
+                const res = listClass.find(item => item === 'active');
+
+                if (res) {
+                    button.classList.remove('active')
+                } else if (event.target !== button) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.add('active');
+                }
+            })
+        }
+    };
+    buttonsAll(boxActiveList);
 })
