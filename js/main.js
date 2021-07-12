@@ -1,19 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const boxActiveList = [...document.getElementsByClassName('box-event-active')];
     const buttonsAll = (buttons) => {
-        document.addEventListener('click', (e) => {
-            const listClass = [...e.target.classList];
-            const res = listClass.find(item => item === 'box-event-active');
-            const heardBox = listClass.find(item => item === 'heart-box');
-
-            if (heardBox === 'heart-box') {
-            } else if (!res) {
-                buttons.forEach(item => {
-                    // item.classList.remove('active');
-                })
-            }
-        })
-
         for (const button of buttons) {
             button.addEventListener('click', (event) => {
                 const listClass = [...button.classList];
