@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const marketplaceStyle = '../styles/css/marketplace/marketplace.css';
+    const productPageStyle = '../styles/css/product-page/product-page.css';
 
     const addStyle = (aFile) => {
         const head = window.document.getElementsByTagName('head')[0]
@@ -21,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return newTag;
         };
         const addElemMarketplace = () => {
+            addStyle(marketplaceStyle);
+            mainContainer.prepend(H1);
+            H1.innerHTML = page;
+
             const productBox = createDOMElem('div','flex','product-box');
             H1.after(productBox);
 
@@ -28,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `${sortSelectDOM}
                 ${toolsProductDOM}
                 ${productListDOM}`;
+        };
+        const addElementProductPage = () => {
+            addStyle(productPageStyle);
         }
 
         const newBody = createDOMElem('div','flex','body');
@@ -42,18 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
             ${modalCartDOM}`;
         document.getElementById('menu').after(mainContainer);
 
-        mainContainer.prepend(H1);
-        H1.innerHTML = page;
-
         switch (page) {
             case 'marketplace':
                 addElemMarketplace();
                 break;
+            case 'product page':
+                addElementProductPage();
+                break;
         }
     }
 
-    addStyle(marketplaceStyle);
-    renderPage(document.body.getAttribute('data-page'));
+    addStyle(productPageStyle);
+    // renderPage(document.body.getAttribute('data-page'));
 
     const cartModal = () => {
         const button = document.getElementById('basket-icon');
@@ -116,6 +124,43 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteCart();
     }
     counterCart();
+
+    const sliderProductPage = () => {
+        const listPhotoProduct = [...document.querySelectorAll('.photo-panel_list .panel_list_elem')];
+        const buttonList = [...document.querySelectorAll('.photo-panel_list-wrapper button')];
+        const panel = document.querySelectorAll('.photo-panel_list-wrapper .wrapper');
+
+        const eventScrollNext = (position) => {
+            panel[0].scroll({
+                left: (position + 100),
+                behavior: 'smooth'
+            })
+        }
+
+        const eventScrollPrev = (position) => {
+            panel[0].scroll({
+                left: (position - 100),
+                behavior: 'smooth'
+            })
+        }
+
+        buttonList.forEach(button => {
+            button.addEventListener('click', ()=> {
+                const positionScroll = panel[0].scrollLeft;
+                const positionButton = button.getAttribute('data-position');
+
+                switch (positionButton) {
+                    case 'next':
+                        eventScrollNext(positionScroll);
+                        break;
+                    case 'prev':
+                        eventScrollPrev(positionScroll);
+                        break;
+                }
+            })
+        })
+    }
+    sliderProductPage();
 
 
 
