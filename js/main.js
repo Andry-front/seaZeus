@@ -126,27 +126,28 @@ document.addEventListener('DOMContentLoaded', () => {
     counterCart();
 
     const sliderProductPage = () => {
+        const frontPanel = document.querySelector('.photo-panel .front-image');
         const listPhotoProduct = [...document.querySelectorAll('.photo-panel_list .panel_list_elem')];
         const buttonList = [...document.querySelectorAll('.photo-panel_list-wrapper button')];
-        const panel = document.querySelectorAll('.photo-panel_list-wrapper .wrapper');
+        const panel = document.querySelector('.photo-panel_list-wrapper .wrapper');
 
         const eventScrollNext = (position) => {
-            panel[0].scroll({
-                left: (position + 100),
+            panel.scroll({
+                left: (position + 116),
                 behavior: 'smooth'
             })
         }
 
         const eventScrollPrev = (position) => {
-            panel[0].scroll({
-                left: (position - 100),
+            panel.scroll({
+                left: (position - 116),
                 behavior: 'smooth'
             })
         }
 
         buttonList.forEach(button => {
             button.addEventListener('click', ()=> {
-                const positionScroll = panel[0].scrollLeft;
+                const positionScroll = panel.scrollLeft;
                 const positionButton = button.getAttribute('data-position');
 
                 switch (positionButton) {
@@ -159,8 +160,58 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
         })
-    }
+
+        listPhotoProduct.forEach(itemPhoto => {
+            itemPhoto.addEventListener('click', () => {
+                frontPanel.querySelector('img').setAttribute('src',itemPhoto.querySelector('img').getAttribute('src'))
+            });
+        })
+    };
     sliderProductPage();
+
+    const tabsProductPage = () => {
+        const tabsButton = [...document.querySelectorAll('.headline-panel button')];
+        const contentPanelList = [...document.querySelectorAll('.content-panel .panel-item')];
+
+        const addActive = (arr,elem) => {
+            arr.forEach(item => {
+                item.classList.remove('active');
+            });
+            elem.classList.add('active');
+        }
+        const eventContentPanel = (position) => {
+            const activeElem = contentPanelList.find((item,key) => key === +position);
+            addActive(contentPanelList,activeElem);
+        };
+
+        tabsButton.forEach(button => {
+            button.addEventListener('click', () => {
+                const position = button.getAttribute('data-description');
+                eventContentPanel(position);
+                addActive(tabsButton,button);
+
+
+                const headlinePanel = document.querySelector('.description-panel .headline-panel');
+
+                switch (position) {
+                    case '0':
+                        headlinePanel.classList.add('active-0');
+                        headlinePanel.classList.remove('active-1');
+                        break;
+                    case '1':
+                        headlinePanel.classList.add('active-1');
+                        headlinePanel.classList.remove('active-0');
+                        break;
+                }
+            })
+        })
+    };
+    tabsProductPage();
+
+    const modalProductPhoto = () => {
+        const frontPhoto = document.querySelector('.photo-panel .front-image');
+    };
+    modalProductPhoto();
 
 
 
