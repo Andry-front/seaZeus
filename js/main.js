@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const listPhotoProduct = [...document.querySelectorAll('.photo-panel_list .panel_list_elem')];
         const buttonList = [...document.querySelectorAll('.photo-panel_list-wrapper button')];
         const panel = document.querySelector('.photo-panel_list-wrapper .wrapper');
+        const lengthPhoto = document.querySelectorAll('.panel_list_elem').length;
 
         const eventScrollNext = (position) => {
             panel.scroll({
@@ -144,6 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             })
         }
+        const lengthPosition = (length,active) => {
+            const frontPhoto = document.querySelector('.photo-panel .front-image');
+            frontPhoto.setAttribute('data-length',`${active + 1} / ${length}`)
+        }
+
+        lengthPosition(lengthPhoto,0);
 
         buttonList.forEach(button => {
             button.addEventListener('click', ()=> {
@@ -161,9 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
 
-        listPhotoProduct.forEach(itemPhoto => {
+        listPhotoProduct.forEach((itemPhoto, key) => {
             itemPhoto.addEventListener('click', () => {
-                frontPanel.querySelector('img').setAttribute('src',itemPhoto.querySelector('img').getAttribute('src'))
+                frontPanel.querySelector('img').setAttribute('src',itemPhoto.querySelector('img').getAttribute('src'));
+
+                lengthPosition(lengthPhoto,key);
             });
         })
     };
@@ -210,6 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modalProductPhoto = () => {
         const frontPhoto = document.querySelector('.photo-panel .front-image');
+
+        frontPhoto.addEventListener('click',() => {
+            console.log(frontPhoto);
+        })
     };
     modalProductPhoto();
 
