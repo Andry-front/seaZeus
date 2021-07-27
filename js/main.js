@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     addStyle(productPageStyle);
-    // renderPage(document.body.getAttribute('data-page'));
+    renderPage(document.body.getAttribute('data-page'));
 
     const cartModal = () => {
         const button = document.getElementById('basket-icon');

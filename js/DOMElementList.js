@@ -896,4 +896,250 @@ const productListDOM = `<div class="product-list flex">
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="product-list_elem-wrapper" data-id="4362">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box active box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="https://content1.rozetka.com.ua/goods/images/big_tile/144249735.jpg" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list_elem-wrapper" data-id="333">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="../images/product-default.png" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list_elem-wrapper" data-id="4444">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="../images/product-default.png" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list_elem-wrapper" data-id="5555">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="../images/product-default.png" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list_elem-wrapper" data-id="6666">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="../images/product-default.png" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list_elem-wrapper" data-id="7777">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="../images/product-default.png" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list_elem-wrapper" data-id="8888">
+                        <div class="product-list_elem">
+                            <div class="box-top">
+                                <div class="heart-box box-event-active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
+                                        <path d="M3.85976 4.34249C5.33107 3.06898 7.62638 3.27576 9.02586 4.72053L9.385 4.37266L9.02586 4.72054L9.64108 5.35566L10.0002 5.72642L10.3594 5.35566L10.9746 4.72054L10.9746 4.72053C12.374 3.27579 14.6692 3.06898 16.1406 4.34241C17.8628 5.83301 17.9503 8.49691 16.3937 10.1049L16.3936 10.1051L10.3577 16.346L10.3576 16.346C10.1591 16.5513 9.83839 16.5513 9.63985 16.346L9.63984 16.346L3.60404 10.1052C2.05009 8.49724 2.13757 5.83317 3.85976 4.34249ZM3.85976 4.34249L3.53253 3.96444L3.85976 4.34249Z"/>
+                                    </svg>
+                                </div>
+                                <a href="/" class="img-wrapper flex">
+                                    <img src="../images/product-default.png" alt="Product name!!">
+                                </a>
+                            </div>
+                            <div class="box-bottom">
+                                <div class="name">
+                                    <a href="/">Bear Teddy Wonka Mashine</a>
+                                </div>
+                                <a href="/" class="score flex">
+                                    <div class="score-logo">
+                                        <img src="../images/score-logo-default.svg" alt="Score name!! logo">
+                                    </div>
+                                    <div class="score-name">
+                                        <p>Jafza 17</p>
+                                    </div>
+                                </a>
+
+                                <div class="price-old">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+
+                                <div class="price">
+                                    <p><span class="currency">$ </span> 0000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>`;
